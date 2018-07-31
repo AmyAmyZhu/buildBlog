@@ -1,6 +1,6 @@
 ---
 title: Apply Optimizer for Java Bytecode to Gain Security
-date: 2018-06-27 09:56:44
+date: 2018-06-27 22:04:53
 ---
 
 Based on the article I wrote: Decode Android Project from APK, we know that revise engineers can easily decode codes and get your source files. there are a number of possible vulnerabilities for unprotected mobile applications, such as insertion of malware, intellectual property theft, priacy and data theft. Therefore, we can use ProGuard or DexGuard to protect. This is a way to apply multiple obfuscation and encryption to make our source codes unreadable.

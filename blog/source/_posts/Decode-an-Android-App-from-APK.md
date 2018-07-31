@@ -1,6 +1,6 @@
 ---
 title: Decode an Android App from APK
-date: 2018-06-27 09:57:04
+date: 2018-06-27 22:04:53
 ---
 
 If an Android App not doing encryption or obfuscation, an APK (Android application package) is easily be decoded. A reverse engineer can see its source codes and XML files.

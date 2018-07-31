@@ -1,6 +1,6 @@
 ---
 title: Enable Localization
-date: 2018-06-29 09:55:28
+date: 2018-06-29 12:51:12
 ---
 
 When we have customized strings in an Andriod App, where are you store them? Some people choose to assign strings directly in the code. However, cosidering a good desgin patern, Andriod separates code and resources. Most of good Android developer put strings in `strings.xml` which is located under __res > values__. This is because we can easily manipulates and customize values.

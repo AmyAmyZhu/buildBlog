@@ -1,6 +1,6 @@
 ---
 title: Apply Dexguard for Modules
-date: 2018-07-13 09:54:40
+date: 2018-07-13 09:58:09
 ---
 
 ###How to apply Proguard/Dexguard

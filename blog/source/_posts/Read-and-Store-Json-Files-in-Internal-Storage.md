@@ -1,6 +1,6 @@
 ---
 title: Read and Store Json Files in Internal Storage
-date: 2018-06-28 09:55:47
+date: 2018-06-28 11:39:53
 ---
 
 Understanding the storages in an Android device, you can easily check or transfer files in both directions: your app and the device. For example, if your app have a licence file, and you want to check the permission, you can store licence file in Android device for further updating and changing.
