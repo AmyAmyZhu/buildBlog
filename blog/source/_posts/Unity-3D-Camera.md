@@ -7,8 +7,9 @@ I am just starting building up an interesting isometric game. As an Unity3D begi
 
 ### Objection:
 
-    - perspective: Camera will render objects with perspective intact. It will look into both visible and invisible objects in 3D.
-    - orthographic: Camera will render objects uniformly, with no sense of perspective. It will look into only visible objects. The camera itself is like a plane. If you want to build 2.5D game, or isometric game, you can set camera orthographic.
+- perspective: Camera will render objects with perspective intact. It will look into both visible and invisible objects in 3D.
+
+- orthographic: Camera will render objects uniformly, with no sense of perspective. It will look into only visible objects. The camera itself is like a plane. If you want to build 2.5D game, or isometric game, you can set camera orthographic.
     
 
 ### Culling Mask:
