@@ -1,9 +1,13 @@
----
 title: Apply Dexguard for Modules
 date: 2018-07-13 09:58:09
+categories:
+- [Android, Proguard/Dexguard]
+tags:
+- Android
+- Proguard/Dexguard
 ---
 
-###How to apply Proguard/Dexguard
+### How to apply Proguard/Dexguard
 
 Proguard/Dexguard shrink and obsfucate resources and codes by scanning and looping up the dependencies. It will do everything it thinks necessary. To apply proguard, simple change __minifyEnabled__ in the module/app you want to apply to be true. Android will apply for Proguard automatically.
 
@@ -14,6 +18,8 @@ buildTypes {
     }
 }
 ```
+
+<!-- more -->
 
 Make sure you are in the correct building type when you use Proguard/Dexguard. You can check __Build Variants__ to see it you are in the correct building type or not.
 
@@ -42,7 +48,7 @@ buildTypes {
 }
 ```
 
-###Apply Dexguard for Android Libraries
+### Apply Dexguard for Android Libraries
 
 If you want to build up an Android library and you want to ship to SDK version to others. It is extremely important you Proguard/Dexguard your SDK, otherwise reverse engineers can see how you implement your library. It is a little bit different when you apply Proguard/Dexguard.
 
@@ -71,7 +77,7 @@ buildTypes {
 }
 ```
 
-###Key methods in Dexguard
+### Key methods in Dexguard
 
 Now we know how to apply Proguard/Dexguard, but how to apply Dexguard rules and how to use them? I am going to illustrate four import keep rules in Proguard/Dexguard.
 
@@ -85,10 +91,11 @@ Now we know how to apply Proguard/Dexguard, but how to apply Dexguard rules and 
 It is default. If you don’t specify a keep directive of any kind, then Proguard is going to both shrink (remove unused code) and obfuscate (rename things) both classes and class members.
 
 2. -keep
+
 |           | Classes     | Members  |
 |-----------|-------------| ---------|
-| shrink    | no         | no      |
-| obfuscate | no         | no      |
+| shrink    | no          | no       |
+| obfuscate | no          | no       |
 
 Keep means opposite of no rules. No shrinking, no obfuscation; not for classes, not for members. __-keepclasseswithmembers__ is same as __-keep__.
 
@@ -122,7 +129,7 @@ This just not obfuscate members.
 6. Others
     - For Android, I faced a problem when I want to apply Proguard/Dexguard to a library which contains jni .so files. Remember to add __-keepresources__ to such source files, otherwise, the name and contant will be obsfucate. Also, add __-dontpreverrify__ at the beginning of your Proguard/Dexguard rules of your Android Application. The reason you’d better to do that is because __-dontpreverify__ prevent pre-proguard your APKs/AARs. There is no need to do so for Android and it will save time.
 
-###Examples
+### Examples
 
 Keep Constructor/Methods of a class:
 

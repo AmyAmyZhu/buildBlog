@@ -1,6 +1,10 @@
----
 title: wait() and notify() in Java
 date: 2018-07-03 10:30:00
+categories:
+- [Java, Concurrency]
+tags:
+- Java
+- Concurrency
 ---
 
 Remember in article synch/Asynch Callback in Java I wrote, multithreading in Java is important and can improve performance. We can use callbacks to notify some threads finish executing. What if we don’t need to pass arguments, but we still want to implements multithreads falixable? Another simple way to let a thread wait and wake up is to use __Object.wait()__ and __Object.notify()__.
@@ -10,7 +14,9 @@ Keep in mind that:
 - __Object.wait()__ means suspend a thread.
 - __Object.notify()__ means wake a thread up.
 
-###Logic
+<!-- more -->
+
+### Logic
 
 To use __wait()__ and __notify()__, we need to create an object to control execuations. This is similary to a lock. We use the common object to lock execuation steps.
 

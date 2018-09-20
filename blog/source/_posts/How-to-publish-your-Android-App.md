@@ -1,14 +1,20 @@
----
 title: How to publish your Android App?
 date: 2018-06-27 22:04:53
+categories:
+- Android
+tags:
+- Android
 ---
 
-###Steps:
+### Steps:
 1. Make sure the current version is great.
 2. Change version number for all gradles.
 3. Generate signed APK
     - __File > Project Structure__, deal with Signing and Build Types
     - __Build > Generate Signed APK__
+
+<!-- more -->
+
 4. Wrap APK and mapping file to a binary directory. Make sure everything is consistent.
 5. Add tags
     - git tag -a X.X.X -m “some commit”

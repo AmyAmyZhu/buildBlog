@@ -1,13 +1,18 @@
----
 title: Enable Localization
 date: 2018-06-29 12:51:12
+categories:
+- Android
+tags:
+- Android
 ---
 
 When we have customized strings in an Andriod App, where are you store them? Some people choose to assign strings directly in the code. However, cosidering a good desgin patern, Andriod separates code and resources. Most of good Android developer put strings in `strings.xml` which is located under __res > values__. This is because we can easily manipulates and customize values.
 
+<!-- more -->
+
 One of the benefits that is intuitionally affects an Andriod App is we can enable localizations. Localization means you can have multiple languages of your App based on the language users setted up. For example, if you implements your App in English, but your user is a French. You can translates values in `strings.xml` in French version, so that when user open your App, they can understand your App because the language of your App will be French.
 
-###How to Enable Localization?
+### How to Enable Localization?
 It is easy, just follow the following steps:
 
 1. Select __res > values__.

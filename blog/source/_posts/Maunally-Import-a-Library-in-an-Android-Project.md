@@ -1,22 +1,30 @@
----
 title: Maunally Import a Library in an Android Project
 date: 2018-06-27 22:04:53
+categories:
+- [Android, SDK]
+tags:
+- Android
+- SDK
 ---
 
 Sometimes we use third-party library, or we implements a module and want it to be a part of our main code’s library. In both scenarios, we can import a library as a module.
 
-###How to import a library in Android Studio?
+### How to import a library in Android Studio?
 
 1. __File > New > Import modlue > add the library path__.
 2. Change library module gradle:
     1. Change `“apply plugin: ‘com.android.application’”` to `“apply plugin: ‘com.android.library’”`
     2. Remove applicationId.
+
+<!-- more -->
+
 3. Change dependency from “compile” to “implementation”
 4. __File > Project Structure > app > Dependencies__, add module library.
 5. Downgrade gradle version in project gradle to “2.3.3” or “2.3.2”
 6. Put/Change “buildToolsVersion “27.0.1” and “useLibrary ‘org.apache.http.legacy’” in app and carto library module.
 
-###UnsatisfiedLinkError happens?
+
+### UnsatisfiedLinkError happens?
 
 This is because no .so file in the app to let the app know there is a new library added. There are several steps involved to add up .so file.
 
@@ -35,7 +43,7 @@ static {
 }
 ```
 
-###How to Run?
+### How to Run?
 
 Since we added a library as a module, therefore, our compile will ask us to edit configuration. To avoid that, go back to MainActivity and run MainActivity instead.
 

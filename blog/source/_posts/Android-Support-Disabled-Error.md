@@ -1,12 +1,15 @@
----
 title: Android Support Disabled Error
 date: 2018-09-18 09:21:50
-tags: Android
+categories:
+- [Android, Errors]
+tags:
+- Android
+- Errors
 ---
 
 Open Android Studio badly will possiably cause the following problem:
 
-```
+```html
 Problems found loading plugins:
 Plugin "Google Analytics Uploader" was not loaded: required plugin "Android Support" is disabled.
 Plugin "SDK Updater" was not loaded: required plugin "Android Support" is disabled.
@@ -16,6 +19,8 @@ Plugin "Google Cloud Tools For Android Studio" was not loaded: required plugin "
 Plugin "Google Cloud Testing" was not loaded: required plugin "Android Support" is disabled.
 Plugin "Google Services" was not loaded: required plugin "Android Support" is disabled.
 ```
+
+<!-- more -->
 
 What I mean badly is when you close Android Studio but there are some demons still running in background, this will cause linking issues between projects. Or it is possible because you delete caches manually:
 

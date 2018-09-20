@@ -1,11 +1,17 @@
----
 title: Apply Optimizer for Java Bytecode to Gain Security
 date: 2018-06-27 22:04:53
+categories:
+- [Android, Proguard/Dexguard]
+tags:
+- Android
+- Proguard/Dexguard
 ---
 
 Based on the article I wrote: Decode Android Project from APK, we know that revise engineers can easily decode codes and get your source files. there are a number of possible vulnerabilities for unprotected mobile applications, such as insertion of malware, intellectual property theft, priacy and data theft. Therefore, we can use ProGuard or DexGuard to protect. This is a way to apply multiple obfuscation and encryption to make our source codes unreadable.
 
-###How to apply Dexguard?
+<!-- more -->
+
+### How to apply Dexguard?
 1. Download Dexguard file from website.
 2. Add `dexguard.dir=/Users/../../../tools/Dexguard/DexGuard-X.X.X` in local.properties. Add your local position where you downloaded and put the Dexguard.
 3. Add `apply plugin 'dexguard'` in library build.gradle to enable Dexguard. It will find local.properties’ link to execute the dexguard.
@@ -13,7 +19,7 @@ Based on the article I wrote: Decode Android Project from APK, we know that revi
     - Look at the above, we can see the dexguard rules is edited in dexguard-project.txt. This is the main place we manage obfuscation. If you don’t have dexguard-project.txt yet, create one under the main directory of your module.
 5. Now you are able to generate aar file for library we want to obfuscate. Open gradle. Find the module’s assemble task. If you choose a buildType, run the specific assemble type. For example, I choose debug type, double click `Library: assembleDebug` in the build.
 
-###If you face any problems, it might be:
+### If you face any problems, it might be:
 1. clean up build. It is the same way you run the assemble. For example, find `Library: clean` under build gradle.
 2. Dexguard terminates whenever there is a warning or error. Use –stacktrace or –debug to get more info of what is happening. If there are many warnings. You can add `dontwarn com.package.**` in dexguard-project.txt to avoid warnings.
 

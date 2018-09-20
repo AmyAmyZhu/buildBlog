@@ -1,13 +1,19 @@
----
 title: Use Artifactory to Upload SDKs
 date: 2018-07-19 10:07:39
+categories:
+- [Android, Artifactory]
+tags:
+- Android
+- Artifactory
 ---
 
 When you build up an Android library, but not sure if it works properly. When a company has multiple modules and want to allow their employees access and use module easily. Aritifactory is one tool that is useful for speeding up development cycles. You can publish your modules or libraries into Artifactory repositories, and only let people in localhost to use them.
 
-###How to install and setup Artifactory?
+### How to install and setup Artifactory?
 
 I am using Linux environment to build up Artifactory. Therefore, I will only talk how to install it in Linux system. If you don’t have Linux system, you can use virtual machine (Virtual Box) or host a Linux system in clouding system (AWS).
+
+<!-- more -->
 
 After you have Linux environment, please check if you have Java installed. If yes, check __java -version__ to make sure it is at least SDK 8. If you don’t have java, downloaded and install it.
 
@@ -22,7 +28,7 @@ After that, you can check in your browser to see if Artifactory is setted up or 
 
 If you want to build a repositories for Android APKs/AARs file, you can click on the user’s button and choose quick setup, then you can setup a Gradle repository for Android Libraries.
 
-###How to upload APKs/AARs into Artifactory
+### How to upload APKs/AARs into Artifactory
 
 In your Library Gradle file, add the following lines:
 

@@ -1,6 +1,9 @@
----
 title: Unity 3D Camera
 date: 2018-07-31 13:44:49
+categories:
+- Unity
+tags:
+- Unity
 ---
 
 I am just starting building up an interesting isometric game. As an Unity3D beginner, I want to collbrate some important components information while I am learning. This blog listed most frequent used elements in Unity3D camera.
@@ -11,6 +14,8 @@ I am just starting building up an interesting isometric game. As an Unity3D begi
 
 - orthographic: Camera will render objects uniformly, with no sense of perspective. It will look into only visible objects. The camera itself is like a plane. If you want to build 2.5D game, or isometric game, you can set camera orthographic.
     
+
+<!-- more -->
 
 ### Culling Mask:
 
